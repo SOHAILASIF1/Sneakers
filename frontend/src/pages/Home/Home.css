@@ -1,0 +1,42 @@
+.home-main{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.home-image img{
+    width: 500px;
+    height: 350px;
+}
+.home-image{
+    width: 700px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.home-heading{
+    display: flex;
+    width: 50%;
+    
+    flex-direction: column;
+    padding: 120px 0;
+    gap: 40px;
+    
+}
+.home-title h2{
+    font-size:  3rem;
+    /* text-align: justify; */
+}
+.home-title p{
+    font-size: 18px;
+    text-align: justify;
+}
+.home-heading  .btn{
+    width: 180px
+}
+.home-title{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
