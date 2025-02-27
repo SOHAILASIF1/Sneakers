@@ -7,6 +7,14 @@ const allApi={
     login:{
         url:`${backendDomain}/api/user/login`,
         method:"post"
+    },
+    userDetail:{
+        url:`${backendDomain}/api/user/details`,
+        method:"get"
+    },
+    logout:{
+        url:`${backendDomain}/api/user/logout`,
+        method:"get"
     }
 }
 export default allApi

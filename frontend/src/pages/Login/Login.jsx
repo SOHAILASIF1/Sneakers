@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Login.css'
 import { Link, useNavigate } from 'react-router-dom'
 import allApi from '../../commen'
 import { toast } from 'react-toastify'
+import {Context} from '../../App'
 
 function Login() {
     const [data,setData]=useState({
         email:"",
         password:""
     })
+    const {fetchData}=useContext(Context)
     const navigate=useNavigate()
     const handleSubmit=async(e)=>{
         e.preventDefault()
@@ -23,6 +25,7 @@ function Login() {
         const res=await dataRes.json()
         if (res.success) {
             toast.success(res.message)
+            fetchData()
             navigate("/")
             
         }

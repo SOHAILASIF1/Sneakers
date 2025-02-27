@@ -94,3 +94,60 @@ export const login=async(req,res)=>{
         
     }
 }
+ export const userDetail=async(req,res)=>{
+
+    try {
+        const user=await User.findById(req?.userId)
+        console.log(req.userId);
+        if (!user) {
+            return res.status(404).json({
+                message:"User Not Found",
+                success:false,
+                error:true
+                
+            })
+
+            
+        }
+        return res.status(200).json({
+            message:"User Fetched",
+            success:true,
+            error:false,
+            data:user
+
+
+
+        })
+        
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+           
+            error:true,
+            message:error.message || error,
+            success:false
+        })
+        
+    }
+}
+export const logout=async(req,res)=>{
+    try {
+        res.clearCookie("token")
+        return res.status(200).json({
+            message:"User Logout",
+            error:false,
+            success:true,
+            data:[]
+        })
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+           
+            error:true,
+            message:error.message || error,
+            success:false
+        })
+        
+    }
+
+}
