@@ -59,13 +59,13 @@ function Header() {
             <div className="cart-button">
                 <FaCartShopping/>
             </div>
-            <div className="cart-button">
+            <Link to={'/adminPanel'} className="cart-button">
                 {
                   user?.role === Role.ADMIN && (
                     <FaUser/>
                   )
                 }
-            </div>
+            </Link>
             <div>
               <h6>{user?.name}</h6>
             </div>

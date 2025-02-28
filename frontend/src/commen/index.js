@@ -15,6 +15,10 @@ const allApi={
     logout:{
         url:`${backendDomain}/api/user/logout`,
         method:"get"
+    },
+    allUser:{
+        url:`${backendDomain}/api/user/allUser`,
+        method:"get"
     }
 }
 export default allApi

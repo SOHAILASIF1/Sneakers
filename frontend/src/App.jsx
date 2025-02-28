@@ -10,6 +10,9 @@ import { ToastContainer } from 'react-toastify';
 import allApi from './commen';
 import { useDispatch } from 'react-redux';
 import { setUserDetail } from './reducers/userSlice';
+import AdminPanal from './pages/AdminPanel/AdminPanal';
+import AllProduct from './pages/AllProduct/AllProduct';
+import AllUser from './pages/AllUser/AllUser';
  export const Context=createContext(null)
 
 
@@ -43,6 +46,12 @@ function App(){
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
+        <Route path='/adminPanel' element={<AdminPanal/>}>
+          <Route path='/adminPanel/allProduct' element={<AllProduct/>} />
+          <Route path='/adminPanel/allUser' element={<AllUser/>} />
+
+
+        </Route>
 
       </Routes>
     </BrowserRouter>

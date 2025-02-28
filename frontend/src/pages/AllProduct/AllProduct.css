@@ -1,0 +1,13 @@
+.main-allProduct{
+    height: 100%;
+    width: 100%;
+    
+ 
+}
+.button-products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+
+}

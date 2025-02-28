@@ -1,0 +1,50 @@
+.main-upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
+    background: #968282;
+      background: rgba(150, 130, 130, 0.5);
+     z-index: 999; 
+    
+}
+.login-input select option{
+    border: none;
+    outline: none;
+    background-color: rgb(167, 155, 155);
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+}
+.product-upload{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: #fff;
+    padding: 10px;
+    width: 400px;
+    flex-direction: column;
+    z-index: 1000;
+   
+   
+  
+}
+.closeButton{
+    padding: 1px;
+    border-radius: 50%;
+}
+.title-upload{
+    width: 100%;
+
+    display: flex;
+   
+    justify-content: space-between;
+    padding: 10px;
+}

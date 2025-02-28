@@ -151,3 +151,26 @@ export const logout=async(req,res)=>{
     }
 
 }
+export const allUser=async(req,res)=>{
+    try {
+        const allUser=await User.find({})
+        return res.status(200).json({
+            message:"ok",
+            data:allUser,
+            error:false,
+            success:true
+
+        })
+        
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+           
+            error:true,
+            message:error.message || error,
+            success:false
+        })
+        
+    }
+
+}
